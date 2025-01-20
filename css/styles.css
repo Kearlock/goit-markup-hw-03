@@ -1,3 +1,27 @@
+/* reset */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+/* Common settings */
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -5,15 +29,6 @@ body {
   letter-spacing: 0.02em;
   color: #434455;
   background-color: #ffffff;
-}
-
-ul,
-ol {
-  list-style-type: none;
-}
-
-a {
-  text-decoration-line: none;
 }
 
 h2 {
@@ -36,7 +51,28 @@ address {
   font-style: normal;
 }
 
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 /* Header */
+
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -51,11 +87,24 @@ address {
   color: #2e2f42;
 }
 
+.header-logo {
+  padding: 24px 0;
+  margin-right: 76px;
+}
+
 .footer-logo .logo-tail {
   color: #f4f4fd;
 }
 
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .nav-link {
+  display: block;
+  padding: 24px 0;
   font-weight: 500;
   /* font-size: 16px; */
   line-height: 1.5;
@@ -63,7 +112,19 @@ address {
   color: #2e2f42;
 }
 
+.contacts {
+  margin-left: auto;
+}
+
+.contacts-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .contacts-link {
+  display: block;
+  padding: 24px 0;
   /* font-size: 16px; */
   line-height: 1.5;
   /* letter-spacing: 0.02em; */
@@ -78,26 +139,39 @@ address {
 }
 
 /* Section Welcome */
+
 .welcome-section {
   background-color: #2e2f42;
 }
 
+.hero-container {
+  padding-top: 188px;
+  height: 600px;
+}
+
 .main-header {
+  display: block;
+  max-width: 496px;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
-  /* letter-spacing: 0.02em; */
   text-align: center;
   color: #fff;
+  margin: 0 auto 48px auto;
 }
 
 .button {
+  display: block;
   cursor: pointer;
   background-color: #4d5ae5;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
+  margin: 0 auto;
+  padding: 16px 32px;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .button:hover,
@@ -107,48 +181,115 @@ address {
 
 /* Section Features */
 
+.features-container {
+  padding-top: 112px;
+  padding-bottom: 120px;
+}
+
 .features-text {
-  /* font-size: 16px; */
-  /* line-height: 1.5; */
-  /* letter-spacing: 0.02em; */
   color: #434455;
+}
+
+.features-list {
+  display: flex;
+  gap: 24px;
+}
+.features-item {
+  width: calc((100% - 24px * 3) / 4);
+}
+
+.features-name {
+  margin-bottom: 8px;
 }
 
 /* Section Team */
 .team {
   background-color: #f4f4fd;
 }
-
+.team-container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 .team-header {
   text-transform: capitalize;
+  margin-bottom: 72px;
+}
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+.team-item {
+  width: calc((100% - 3 * 24px) / 4);
+  background-color: #ffffff;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
-.team-item {
-  background-color: #ffffff;
+.team-img {
+  display: block;
+}
+
+.team-item-label {
+  padding: 32px 16px;
+  text-align: center;
 }
 
 .team-name {
-  text-align: center;
+  margin-bottom: 8px;
 }
+/* Section Portfolio */
 
-.team-text {
-  text-align: center;
-  /* letter-spacing: 0.02em; */
+.container-portfolio {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .portfolio-header {
   text-transform: capitalize;
+  margin-bottom: 72px;
+}
+.potfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
 }
 
-/* .portfolio-text {
-  letter-spacing: 0.02em;
-} */
+.portfolio-item {
+  width: calc((100% - 2 * 24px) / 3);
+}
+
+.potfolio-image {
+  display: block;
+}
+
+.portfolio-item-label {
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+  padding: 32px 16px;
+}
+
+.portfolio-name {
+  margin-bottom: 8px;
+}
+
+/* Footer */
 
 .footer {
   background-color: #2e2f42;
 }
+.container-footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
 
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
+}
 .footer-text {
   color: #f4f4fd;
-  /* letter-spacing: 0.02em; */
+  max-width: 264px;
 }
