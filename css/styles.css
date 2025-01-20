@@ -121,7 +121,6 @@ address {
   display: block;
   padding: 24px 0;
   font-weight: 500;
-  /* font-size: 16px; */
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
@@ -140,9 +139,7 @@ address {
 .contacts-link {
   display: block;
   padding: 24px 0;
-  /* font-size: 16px; */
   line-height: 1.5;
-  /* letter-spacing: 0.02em; */
   color: #434455;
 }
 
@@ -159,10 +156,6 @@ address {
   background-color: #2e2f42;
   padding-top: 188px;
   padding-bottom: 188px;
-}
-
-.hero-container {
-  height: 600px;
 }
 
 .main-header {
